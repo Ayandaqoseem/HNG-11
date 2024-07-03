@@ -1,0 +1,201 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #4caf50;
+  color: #ffffff;
+  padding: 2rem 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+/* Profil Section */
+section {
+  margin: 2rem auto;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  border-top: 2px solid #4caf50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.profile img {
+  border-radius: 50%;
+  border: 2px solid #4caf50;
+  object-fit: cover;
+  animation: slide-right 0.95s ease;
+}
+
+.profile .text-1 {
+  animation: slide-left 0.95s ease;
+}
+
+/* Goals Section */
+.goals-container h2,
+h4 {
+  animation: slide-up 0.95s ease;
+}
+
+.goals-container ul {
+  padding: 0;
+  animation: slide-up 0.95s ease;
+}
+
+.goals-container li {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background-color: #e7f5e1;
+  border-left: 4px solid #4caf50;
+  border-radius: 4px;
+  list-style: none;
+  animation: slide-up 0.95s ease;
+  opacity: 1;
+  transition: opacity 0.1s ease-out;
+}
+
+.animated {
+  animation: slide-up 1s ease-out forwards;
+}
+
+/* Links Section */
+.links-container ul {
+  padding: 0;
+}
+
+.links-container li {
+  margin: 0.5rem 0;
+}
+
+.links-container .links-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.links-container .links-wrapper .ul-container a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.links-container a:hover {
+  text-decoration: underline;
+}
+
+.links-container .links-wrapper .hng-logo {
+  position: relative;
+  padding: 1rem;
+  border: 1px solid #4caf50;
+  border-radius: 3px;
+}
+
+.links-container .links-wrapper .hero_five {
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+  background-color: transparent;
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-10rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(10rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(10rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  section {
+    margin: 1em;
+    padding: 1.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 2em 0;
+  }
+  header h1 {
+    font-size: 1.5em;
+  }
+  section {
+    margin: 1em;
+    padding: 1.5em;
+  }
+  .profile div {
+    margin: 0.5em;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    text-align: justify;
+  }
+  .profile .text-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 440px) {
+  .profile {
+    overflow-x: hidden;
+  }
+  .links-container h2 {
+    text-align: center;
+  }
+  .links-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .links-container .links-wrapper .hng-logo {
+    width: 5em;
+  }
+  .links-wrapper .hero_five {
+    left: 1rem;
+  }
+}
